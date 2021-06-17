@@ -8,7 +8,23 @@ export const Tile = (props) => {
   return (
     <div className="tile-container">
     
-    {array.map((item, index) =>  <p>{item}</p>)}
+      {
+        
+        array.map((item, index) =>  {
+
+          let className;
+
+          if (index === 0){
+            className = 'tile-title';
+          }else {
+            className = 'tile';
+          }
+         
+          return <p className={className} key={index}>{item}</p>
+          }
+          )
+      
+      }
 
     </div>
   );
