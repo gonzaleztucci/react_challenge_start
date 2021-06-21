@@ -15,7 +15,8 @@ export const ContactsPage = (props) => {
     If it is, alerts the user to input a different 
     name and clears the name field on the form.
     Effect must be used every render, 
-    so no Effect Dependency Array is used  */
+    so no Effect Dependency Array is used.
+    Clean up function sets Duplicate back to False  */
 
   useEffect(() => {
     props.contacts.map((item) => {
@@ -38,9 +39,6 @@ export const ContactsPage = (props) => {
 
   const handleSubmit = (e) => {
         e.preventDefault();
-
-    
-
       /*
     Add contact info and clear data
     if the contact name is not a duplicate
@@ -53,10 +51,6 @@ export const ContactsPage = (props) => {
     }
   };
 
-  /*
-  Using hooks, check for contact name in the 
-  contacts array variable in props
-  */
 
   return (
     <div>
@@ -64,13 +58,13 @@ export const ContactsPage = (props) => {
         <h2>Add Contact</h2> 
 
         <ContactForm
-        name={currentName}
-        setName={setCurrentName}
-        phone= {currentPhone}
-        setPhone={setCurrentPhone}
-        email={currentEmail}
-        setEmail={setCurrentEmail}
-        handleSubmit={handleSubmit}
+          name={currentName}
+          setName={setCurrentName}
+          phone= {currentPhone}
+          setPhone={setCurrentPhone}
+          email={currentEmail}
+          setEmail={setCurrentEmail}
+          handleSubmit={handleSubmit}
         />
       </section>
       <hr />

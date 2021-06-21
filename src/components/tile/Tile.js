@@ -2,15 +2,14 @@ import React from "react";
 
 export const Tile = (props) => {
 
-  console.log('TILE');
-  console.log(props.tile);
-  const array = Object.values(props.tile);
+  /* Receives a Tile and key as props */
+
   return (
     <div className="tile-container">
     
       {
         
-        array.map((item, index) =>  {
+        Object.values(props.tile).map((item, index) =>  {
 
           let className;
 

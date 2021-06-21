@@ -1,17 +1,21 @@
 import React from "react";
 
 
-// {
-//   name,
-//   setName,
-//   phone,
-//   setPhone,
-//   email,
-//   setEmail,
-//   handleSubmit
-// }
-
 export const ContactForm = (props) => {
+
+  /*
+Props received are:
+{
+  name,
+  setName,
+  phone,
+  setPhone,
+  email,
+  setEmail,
+  handleSubmit
+}
+*/
+
   return (
     // ContactForm
     <form onSubmit={props.handleSubmit}>
