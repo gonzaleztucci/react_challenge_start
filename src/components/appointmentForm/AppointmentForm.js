@@ -1,19 +1,19 @@
 import React from "react";
 import { ContactPicker } from '../contactPicker/ContactPicker';
 
-// Props received by AppointmentForm
-// {
-//   contacts,
-//   title,
-//   setTitle,
-//   contact,
-//   setContact,
-//   date,
-//   setDate,
-//   time,
-//   setTime,
-//   handleSubmit
-// }
+/*Props received by AppointmentForm
+{
+  contacts,
+  title,
+  setTitle,
+  contact,
+  setContact,
+  date,
+  setDate,
+  time,
+  setTime,
+  handleSubmit
+} */
 
 export const AppointmentForm = (props) => {
   const getTodayString = () => {
@@ -46,17 +46,13 @@ export const AppointmentForm = (props) => {
         onChange = { (e) => props.setTime(e.target.value) }
       />
       <ContactPicker 
-      contacts = {props.contacts} 
-      onChange = {(e) => props.setContact(e.target.value)}/>
+        contacts = {props.contacts} 
+        onChange = {(e) => props.setContact(e.target.value)}
+        />
 
       <input 
         type = 'submit'
       />
-
-      
-
-      
-
     </form>
   );
 };

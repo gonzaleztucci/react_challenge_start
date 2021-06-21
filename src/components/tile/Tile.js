@@ -15,7 +15,7 @@ export const Tile = (props) => {
 
           if (index === 0){
             className = 'tile-title';
-          }else {
+          } else {
             className = 'tile';
           }
          
