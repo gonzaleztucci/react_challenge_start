@@ -10,18 +10,23 @@ export const ContactsPage = (props) => {
   */
 
   const [currentName, setCurrentName] = useState('');
+
+  /*Check if the name introduced is already stored.
+    If it is, alerts the user to input a different 
+    name and clears the name field on the form.
+    Effect must be used every render, 
+    so no Effect Dependency Array is used  */
+
   useEffect(() => {
     props.contacts.map((item) => {
       if (item.name === currentName){
-        alert(`${currentName} is already in use`);
+        alert(`Contact name ${currentName} is already in use, please enter a diffent name`);
         setDuplicate(true);
-        alert(duplicate);
+        setCurrentName('');
       }
     } )
-    //return () => setDuplicate(false);
-  });
-
-
+    return setDuplicate(false);
+  }  );
 
 
   const [currentPhone, setCurrentPhone] = useState();

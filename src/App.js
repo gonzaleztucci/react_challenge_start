@@ -13,6 +13,19 @@ function App() {
 
   const [appointments, setAppointments] = useState([]);
 
+ 
+
+  const ROUTES = {
+    CONTACTS: "/contacts",
+    APPOINTMENTS: "/appointments",
+  };
+
+  /*
+  Implement functions to add data to
+  contacts and appointments
+  */
+
+// Adds a contact to the contacts object array
   const addContact = (name, phoneNumber, email) => {
 
     const newContact = {
@@ -24,7 +37,7 @@ function App() {
       return [...prev, newContact];      
     });
   };
-
+// Adds an appointment to the appointments array
   const addAppointments = (title, contact, date, time) => {
     const newAppointment = {
       title: title,
@@ -37,22 +50,6 @@ function App() {
     });
   };
 
-
-
-
-  
-
-
-
-  const ROUTES = {
-    CONTACTS: "/contacts",
-    APPOINTMENTS: "/appointments",
-  };
-
-  /*
-  Implement functions to add data to
-  contacts and appointments
-  */
 
   return (
     <>
